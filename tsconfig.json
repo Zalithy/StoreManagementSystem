@@ -1,8 +1,8 @@
 {
-
   "compilerOptions": {
     "jsx": "react-jsx",
     "resolveJsonModule": true,
-    "esModuleInterop": true
+    "esModuleInterop": true,
+    "typeRoots": ["./src/api.d.ts"]
   }
 }

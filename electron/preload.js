@@ -4,4 +4,21 @@ contextBridge.exposeInMainWorld('api', {
   test: async (args) => {
     ipcRenderer.invoke('test', args);
   },
+  updateQuery: async (query) => {
+    try {
+      const result = await ipcRenderer.invoke('update-query', query)
+      return result;
+    } catch (e) {
+      throw new Error('Error updating query');
+    }
+  },
+  askQuery: async (query) => {
+    try {
+      const result = await ipcRenderer.invoke('ask-query', query)
+      return result;
+    } catch (e) {
+      console.error(e)
+      throw new Error;
+    }
+  }
 });

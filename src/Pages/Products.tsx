@@ -6,12 +6,13 @@ import { InputBox } from "../Components/InputBox"
 
 const ProductDialog = ({refe}) => {
 
+
   return (
     <Dialog reference={refe}>
         <form>
           <InputBox required={true} span="Nombre" inputType="text"/>
           <InputBox currency="$" span="Precio" inputType="number"/>
-          <button onClick={() => alert("no")}>si?</button>
+          <button>si?</button>
         </form>
     </Dialog>
   )
