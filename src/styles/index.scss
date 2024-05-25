@@ -1,0 +1,37 @@
+@font-face {
+  font-family: 'Inter';
+  src: url('./static/Inter-Regular.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Inter';
+  src: url('./static/Inter-Medium.ttf') format('truetype');
+  font-weight: 500; /* medium */
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Inter';
+  src: url('./static/Inter-Bold.ttf') format('truetype');
+  font-weight: bold;
+  font-style: normal;
+}
+
+/*FONTS*/
+
+@import url('./navbar.scss');
+@import './_variables.scss';
+@import url('./container.scss');
+
+* {
+  margin: 0;
+}
+
+body {
+  background-color: $gray;
+  color: white;
+  font-family: 'Inter';
+  font-weight: bold;
+}

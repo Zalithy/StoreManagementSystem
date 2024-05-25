@@ -1,0 +1,37 @@
+.inputbox {
+  display: flex;
+  flex-direction: column; /* Stack label over input */
+  align-items: center;
+  justify-content: center;
+}
+
+.inputbox span {
+  font-size: 1.2rem;
+  color: #000000;
+  margin-bottom: 5px;
+}
+
+.inputbox input, select {
+  font-size: 1.1rem;
+
+  padding: 8px;
+  border: 2px solid #ccc;
+  border-radius: 8px;
+  transition: all 0.3s ease-in-out;
+}
+
+.inputbox input:hover, select:hover {
+  border-color: #0056b3; /* darker blue for focus */
+  box-shadow: 0 0 8px rgba(0, 86, 179, 0.25);
+}
+
+.inputbox input:hover, select:hover {
+  border-color: #007bff; /* lighter blue when hovered */
+}
+
+.inputCurrency {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+}
