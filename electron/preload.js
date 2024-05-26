@@ -7,6 +7,8 @@ contextBridge.exposeInMainWorld('api', {
   updateQuery: async (query) => {
     try {
       const result = await ipcRenderer.invoke('update-query', query)
+
+      console.log(result)
       return result;
     } catch (e) {
       throw new Error('Error updating query');

@@ -32,7 +32,7 @@ ipcMain.handle('update-query', async (event, query) => {
         if (err) {
           reject(err);
         } else {
-          resolve();
+          resolve(`Query executed: ${query}`);
         }
       });
     });

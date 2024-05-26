@@ -1,7 +1,7 @@
 export const askQuery = async (query: string) => {
   try{
-    const rows = await window.api.askQuery(query);
-    return rows
+    const result = await window.api.updateQuery(query);
+    return result;
   }
   catch(e){
     console.log(e)

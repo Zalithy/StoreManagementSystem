@@ -1,26 +1,25 @@
-import { Input } from './less/Input'
 import './styles/InputBox.scss'
 
 interface Props {
-  children?: React.ReactNode;
   currency?: string;
-  span: string;
-  inputType: "text" | "number";
-  required?: boolean
+  label: string;
+  children: any;
+  error?: any;
 }
 
-export const InputBox = ({span, inputType, required, currency}: Props) => {
+export const InputBox = ({children, label, error, currency}: Props) => {
   return (
     <div className="inputbox">
-        <span>{span}</span>
+        <span>{label}</span>
         {currency ? 
           <div className='inputCurrency'>
             <span>{currency}</span>
-            <Input type={inputType} require={required}/>
+            {children}
           </div>
           :
-          <Input require={required} type={inputType}/>
+          children
         }
+        {error ? <p>{error}</p> : null}
     </div>
   )
 }
