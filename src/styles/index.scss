@@ -24,6 +24,8 @@
 @import url('./navbar.scss');
 @import './_variables.scss';
 @import url('./container.scss');
+@import url('../Components/styles/Input.scss');
+@import url('../Components/styles/InputBox.scss');
 
 * {
   margin: 0;
@@ -31,7 +33,7 @@
 
 body {
   background-color: $gray;
-  color: white;
+  color: rgb(0, 0, 0);
   font-family: 'Inter';
   font-weight: bold;
 }

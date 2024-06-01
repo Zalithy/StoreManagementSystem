@@ -4,6 +4,7 @@ CREATE TABLE IF NOT EXISTS products (
     price INTEGER,
     currency INTEGER,
     categoryID INTEGER,
+    active INTEGER DEFAULT 1,
     FOREIGN KEY (categoryID) REFERENCES Category(id)
 );
 

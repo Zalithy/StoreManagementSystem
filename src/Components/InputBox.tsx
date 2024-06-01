@@ -1,7 +1,8 @@
 import './styles/InputBox.scss'
+import './styles/Input.scss'
 
 interface Props {
-  currency?: string;
+  currency?: any;
   label: string;
   children: any;
   error?: any;

@@ -11,7 +11,7 @@
   margin-bottom: 5px;
 }
 
-.inputbox input, select {
+input, select {
   font-size: 1.1rem;
 
   padding: 8px;
@@ -20,12 +20,12 @@
   transition: all 0.3s ease-in-out;
 }
 
-.inputbox input:hover, select:hover {
+input:hover, select:hover {
   border-color: #0056b3; /* darker blue for focus */
   box-shadow: 0 0 8px rgba(0, 86, 179, 0.25);
 }
 
-.inputbox input:hover, select:hover {
+input:hover, select:hover {
   border-color: #007bff; /* lighter blue when hovered */
 }
 
@@ -34,4 +34,8 @@
   flex-direction: row;
   align-items: center;
   justify-content: center;
+}
+
+input[type="number"]{
+  width: 15vh;
 }

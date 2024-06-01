@@ -38,7 +38,8 @@ ipcMain.handle('update-query', async (event, query) => {
     });
     database.close();
   } catch (e) {
-    throw new Error('Error updating query');
+    console.log(e)
+    throw new Error(e);
   }
 });
 
@@ -57,6 +58,14 @@ ipcMain.handle('ask-query', async (event, query) => {
     database.close();
     return result;
   } catch (e) {
+    console.log(e)
     throw new Error('Error querying database');
   }
+});
+
+const {getDolarAPI} = require("./dolar")
+
+ipcMain.handle('getDolar', async (event) => {
+  const tasa = await getDolarAPI();
+  return tasa
 });

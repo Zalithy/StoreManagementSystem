@@ -5,6 +5,7 @@ import { Home } from "./Pages/Home";
 import { Products } from './Pages/Products';
 
 import './styles/index.scss'
+import { Sales } from "./Pages/Sales";
 
 const router = createHashRouter([
   {
@@ -14,6 +15,10 @@ const router = createHashRouter([
   {
     path: "/products",
     element: <Products/>
+  },
+  {
+    path: "/sale",
+    element: <Sales/>
   }
 ])
 

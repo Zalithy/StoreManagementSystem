@@ -22,5 +22,8 @@ contextBridge.exposeInMainWorld('api', {
       console.error(e)
       throw new Error;
     }
-  }
+  },
+  getDolar: async () => {
+    return await ipcRenderer.invoke('getDolar');
+  },
 });

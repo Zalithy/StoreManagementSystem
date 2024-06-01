@@ -1,18 +1,19 @@
 export const askQuery = async (query: string) => {
   try{
-    const result = await window.api.updateQuery(query);
+    const result = await window.api.askQuery(query);
     return result;
   }
   catch(e){
-    console.log(e)
-    throw new Error
+    console.error(e)
+    throw new Error(e)
   }
   
 }
 export const updateQuery = (query: string) => {
   try{
-    window.api.askQuery(query);
+    window.api.updateQuery(query);
   } catch(e){
-    throw new Error
+    console.error(e)
+    throw new Error(e)
   }
 }
